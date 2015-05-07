@@ -15,16 +15,10 @@ public class Logic {
     public static void main(String[] args) {
         Presentation pt = new Presentation();
         Data dt = new Data();
-         dt = pt.selectShapeType(dt);
-
+         
+        dt = pt.selectShapeType(dt);
         if (dt.getShapeType().equalsIgnoreCase("square")) {
-             //float squareArea;
-            //float sideLength;
-
-            System.out.println("what is the side length?");
-            sideLength = sc.nextFloat();
-            squareArea = sideLength * sideLength;
-            System.out.println("The area for your square: " + squareArea);
+            pt.square(dt);
         }
         
            

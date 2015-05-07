@@ -13,18 +13,25 @@ import java.util.Scanner;
  * @author ddizoya
  */
 public class Presentation {
-    Scanner sc;
+    Scanner sc = new Scanner(System.in);;
     
-    public Data selectShapeType(Data dt){
+    public Data selectShapeType(Data obj){
         
-        sc = new Scanner(System.in);
+       
         System.out.println("What shape would you like to find the area of? (square, circle, triangle, rectangle):");
-        dt.setShapeType(sc.nextLine());
-        System.out.println("You said: " + dt.getShapeType());
+        obj.setShapeType(sc.nextLine());
+        System.out.println("You said: " + obj.getShapeType());
         
-        return dt;
+        return obj;
     }
     
+    public void square(Data obj){
+        
+            System.out.println("what is the side length?");
+            obj.setSideLength(sc.nextFloat());
+            obj.setSquareArea(obj.getSideLength()*obj.getSideLength());
+            System.out.println("The area for your square: " + obj.getSquareArea());
+    }
     
     
     
