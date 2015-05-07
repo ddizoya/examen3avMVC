@@ -14,8 +14,6 @@ public class Presentation {
 
     Scanner sc = new Scanner(System.in);
 
-    ;
-    
     /**
      *
      * @param obj Se le manda un objeto de tipo Data. Mediante el atributo ShapeType,
