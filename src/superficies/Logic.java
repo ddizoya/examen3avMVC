@@ -1,3 +1,7 @@
+/**
+ * Clase lógica del programa. Evalúa simplemente su ejecución. 
+ * Es el núcleo central del funcionamiento del programa, desde donde se ejecuta. 
+ */
 package superficies;
 
 import java.util.Scanner;
@@ -5,17 +9,21 @@ import java.util.Scanner;
 /**
  * Examen de MVC 3ª Avaliación
  *
- * @author damian
+ * @author ddizoya
  */
 public class Logic {
 
     /**
-     * @param args the command line arguments
+     * @param args La ejecución lineal del programa.
      */
     public static void main(String[] args) {
         Presentation pt = new Presentation();
         Data dt = new Data();
-        
+
+        /*Sobreescribimos el objeto Data, porque el método del objeto
+         Presentation recibe el objeto Data y lo retorna de nuevo.
+         Ahora se podrá evaluar el ShapeType que el usuario ha escogido. 
+         */
         dt = pt.selectShapeType(dt);
         if (dt.getShapeType().equalsIgnoreCase("square")) {
             pt.square(dt);
